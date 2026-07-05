@@ -8,6 +8,10 @@ $time=$_POST['rtime'];
 
 
 $con=mysqli_connect("localhost","root","","twist");
+if(isset($_FILES['image']){
+echo "File Update";
+}
+
 
 
 if($con){
