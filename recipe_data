@@ -2,6 +2,7 @@
 $name=$_POST['name'];
 $des=$_POST['description'];
 $cat=$_POST['category'];
+
 $img=$_POST['image'];
 $lev=$_POST['d_level'];
 $time=$_POST['rtime'];
