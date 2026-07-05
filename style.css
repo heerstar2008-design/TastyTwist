@@ -1,0 +1,1029 @@
+/* Premium Typography Import */
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Dynamic Global Properties */
+:root {
+    --bg-universe: #FAF8F6;
+    --card-surface: #FFFFFF;
+    --text-dark: #12131A;
+    --text-muted: #787A87;
+    
+    /* Unique Flavor Palette */
+    --accent-strawberry: #FF4A70;
+    --accent-pastry: #9B63FF;
+    --accent-cookie: #FFAA2C;
+    --glass-border: rgba(18, 19, 26, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-universe);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    padding: 24px;
+    gap: 24px;
+}
+
+/* ==========================================
+   📦 FLOATING SIDEBAR (UX Redefined)
+   ========================================== */
+.floating-sidebar {
+    width: 280px;
+    background: var(--card-surface);
+    border-radius: 24px;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--glass-border);
+    position: sticky;
+    top: 24px;
+    height: calc(100vh - 48px);
+    
+}
+
+.brand-zone {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 50px;
+}
+
+.brand-blob {
+    background: var(--accent-strawberry);
+    color: #FFF;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(255, 74, 112, 0.3);
+}
+
+.brand-text h3 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.3px;
+}
+
+.brand-text span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.nav-cluster {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.nav-pill {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border-radius: 16px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    gap: 14px;
+}
+
+.nav-pill i {
+    font-size: 18px;
+}
+
+.nav-pill:hover {
+    color: var(--text-dark);
+    background: #F4F2F0;
+}
+
+.nav-pill.active {
+    background: var(--text-dark);
+    color: #FFFFFF;
+    box-shadow: 0 10px 25px rgba(18, 19, 26, 0.15);
+}
+
+.sidebar-footer-card {
+    background: #FFF1F4;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    color: var(--accent-strawberry);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   🖼️ MAIN WORKSPACE
+   ========================================== */
+.main-workspace {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Navbar */
+.workspace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding: 10px 0;
+}
+
+.super-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.page-main-heading {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    margin: 4px 0 0 0;
+}
+
+.chef-profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--card-surface);
+    padding: 8px 16px 8px 8px;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 42px;
+    height: 42px;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.online-indicator {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 10px;
+    height: 10px;
+    background: #10B981;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.meta h6 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.meta span {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* Editorial Hero Banner */
+.editorial-hero {
+    background: hsl(180, 20%, 99%);
+    color: #070707;
+    padding: 40px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.hero-content h2 {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.hero-content p {
+    color: #9A9DAA;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Creative Dynamic Interactive Button */
+.btn-creative {
+    background: var(--card-surface);
+    border: none;
+    padding: 8px 24px 8px 8px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-icon {
+    width: 38px;
+    height: 38px;
+    background: var(--accent-strawberry);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: transform 0.4s ease;
+}
+
+.btn-text {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.btn-creative:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.btn-creative:hover .btn-icon {
+    transform: rotate(90deg);
+}
+
+/* ==========================================
+   ⚡ ASYMMETRIC METRICS GRID
+   ========================================== */
+.organic-card {
+    background: var(--card-surface);
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.organic-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(18, 19, 26, 0.04);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.organic-card .icon {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+/* Individualized Card Color Themes */
+.visual-accent-1 .icon { background: #FFF0F2; color: var(--accent-strawberry); }
+.visual-accent-2 .icon { background: #EEF4FF; color: #3B82F6; }
+.visual-accent-3 .icon { background: #FFFBEB; color: #F59E0B; }
+.visual-accent-4 .icon { background: #F5F3FF; color: #8B5CF6; }
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.counter-display {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 0;
+}
+
+.trend {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.trend.positive { background: #E6FDF4; color: #10B981; }
+.trend.active-stars { color: #FFAA2C; letter-spacing: 1px; }
+.trend.status-alert { background: #FEF2F2; color: #EF4444; }
+
+/* ==========================================
+   📊 GRAPHICS AND INSIGHT BLOCKS
+   ========================================== */
+.deep-analytics-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.studio-card {
+    background: var(--card-surface);
+    border-radius: 24px;
+    padding: 28px;
+    border: 1px solid var(--glass-border);
+}
+
+.studio-card-header h4 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+/* Sleek Minimalist Donut Component */
+.studio-card-body.align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.donut-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+.donut-graphic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--accent-strawberry) 0% 60%,
+        var(--accent-pastry) 60% 80%,
+        var(--accent-cookie) 80% 100%
+    );
+    border: 8px solid var(--card-surface);
+    box-shadow: inset 0 0 0 10px var(--card-surface);
+}
+
+.donut-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.donut-center-text h3 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.donut-center-text span {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.custom-legends {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legend-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #525461;
+}
+
+.bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.bullet.c-pink { background: var(--accent-strawberry); }
+.bullet.c-purple { background: var(--accent-pastry); }
+.bullet.c-orange { background: var(--accent-cookie); }
+
+/* Glowing Sentiment Visuals */
+.score-badge-blob {
+    width: 100px;
+    height: 100px;
+    background: #FFF0F3;
+    border-radius: 35% 65% 60% 40% / 40% 40% 60% 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    animation: organicBubble 6s ease-in-out infinite;
+}
+
+.score-badge-blob h1 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 36px;
+    color: var(--accent-strawberry);
+    margin: 0;
+}
+
+.stars-glowing-row i {
+    color: var(--accent-cookie);
+    margin: 0 2px;
+    font-size: 16px;
+    filter: drop-shadow(0 2px 8px rgba(255,170,44,0.3));
+}
+
+.sub-text {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Dynamic Activity Feed Component */
+.item-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-post {
+    display: flex;
+    gap: 14px;
+}
+
+.avatar-ring {
+    border: 2px solid #F4F2F0;
+    padding: 2px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+}
+
+.avatar-ring img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-meta h6 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.post-meta .time {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.comment {
+    font-size: 13px;
+    color: #525461;
+    margin: 4px 0 0 0;
+    line-height: 1.4;
+}
+
+/* ==========================================
+   🛏️ EDITORIAL FOOTER
+   ========================================== */
+.studio-footer {
+    margin-top: auto;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* Blob Animation Function */
+@keyframes pulseOrb {
+    0% { transform: scale(1) translate(0px, 0px); filter: blur(120px); }
+    50% { transform: scale(1.1) translate(20px, -10px); filter: blur(130px); }
+    100% { transform: scale(1) translate(0px, 0px); filter: blur(120px); }
+}
+/* ==========================================
+   📱 ADAPTIVE MEDIA BREAKPOINTS
+   ========================================== */
+@media(max-width: 1200px) {
+    .deep-analytics-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+    .feature-feedback {
+        grid-column: span 2;
+    }
+}
+@media (max-width: 767.98px) {
+    .sidebar-container { 
+        display: none !important; 
+    }
+    
+}
+
+
+@media(max-width: 992px) {
+    .app-container {
+        flex-direction: column;
+    }
+    .floating-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        padding: 24px;
+    }
+    .brand-zone {
+        margin-bottom: 20px;
+    }
+    .nav-cluster {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .sidebar-footer-card {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    .editorial-hero {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .deep-analytics-layout {
+        grid-template-columns: 1fr;
+    }
+    .feature-feedback {
+        grid-column: span 1;
+    }
+}
+/* Dropdown Container */
+.nav-dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Arrow Animation */
+.nav-dropdown .arrow-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    color: var(--text-muted);
+}
+
+/* Submenu Styles (Hidden by default) */
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-left: 20px; /* અંદરની તરફ સ્પેસ આપવા */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Submenu Items */
+.submenu-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.submenu-pill i {
+    font-size: 14px;
+}
+
+/* Hover Effect on Submenu */
+.submenu-pill:hover {
+    color: var(--accent-strawberry);
+    background: #FFF0F2;
+}
+
+/* CSS Magic: જ્યારે Recipes પર ક્લિક કે હોવર થાય ત્યારે સબમેનૂ ઓપન થશે */
+.nav-dropdown:hover .submenu,
+.nav-dropdown:focus-within .submenu {
+    max-height: 120px; /* સબમેનૂની અંદાજિત હાઇટ */
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+/* હોવર વખતે એરો ફેરવવા માટે */
+.nav-dropdown:hover .arrow-icon {
+    transform: rotate(180deg);
+    color: var(--text-dark);
+}
+
+
+
+/* ==========================================
+   🧁 COMPONENT INTERACTION & ANIMATION ENGINE
+   ========================================== */
+
+/* --- GLOBAL CARDS BASE TRANSITION CONFIG --- */
+.organic-card, .studio-card {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.organic-card:hover, .studio-card:hover {
+    transform: translateY(-6px);
+}
+.organic-card .icon, .organic-card .icon i, .trend {
+    transition: all 0.3s ease;
+}
+
+
+/* --- [1 / 7] TOTAL RECIPES CARD --- */
+@keyframes hoverCakeBounce {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(-12deg) translateY(-2px); }
+}
+.recipe-card:hover {
+    box-shadow: 0 20px 30px rgba(255, 74, 112, 0.12);
+}
+.recipe-card:hover .icon {
+    background: var(--accent-strawberry) !important;
+    color: #FFFFFF !important;
+}
+.recipe-card:hover .icon i {
+    animation: hoverCakeBounce 0.6s ease infinite;
+}
+
+
+/* --- [2 / 7] TOTAL VIEWS CARD --- */
+.views-card:hover {
+    box-shadow: 0 20px 30px rgba(59, 130, 246, 0.12);
+}
+.views-card:hover .icon i {
+    transform: scale(1.25);
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+}
+.views-card:hover .trend {
+    transform: translateX(4px);
+    background: #3B82F6 !important;
+    color: #FFFFFF !important;
+}
+
+
+/* --- [3 / 7] AVERAGE RATING CARD --- */
+@keyframes hoverStarSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+.avg-rating-card:hover {
+    box-shadow: 0 20px 30px rgba(245, 158, 11, 0.12);
+}
+.avg-rating-card:hover .icon i {
+    animation: hoverStarSpin 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.avg-rating-card:hover .trend.active-stars {
+    letter-spacing: 2px;
+}
+
+
+/* --- [4 / 7] FEEDBACK HUB CARD --- */
+@keyframes hoverAlertHeartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); background: #EF4444; color: #FFFFFF; }
+}
+.feedback-card:hover {
+    box-shadow: 0 20px 30px rgba(139, 92, 246, 0.12);
+}
+.feedback-card:hover .icon i {
+    transform: rotate(-15deg) scale(1.2);
+}
+.feedback-card:hover .status-alert {
+    animation: hoverAlertHeartbeat 0.8s infinite;
+}
+
+
+/* --- [5 / 7] CATEGORY DISTRIBUTION --- */
+.feature-category:hover {
+    box-shadow: 0 20px 40px rgba(18, 19, 26, 0.05);
+}
+.feature-category .donut-graphic {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* Scales and slightly positions the breakdown donut chart beautifully on container focus */
+.feature-category:hover .donut-graphic {
+    transform: scale(1.06) rotate(10deg);
+}
+.feature-category .legend-row {
+    transition: transform 0.3s ease;
+}
+.feature-category:hover .legend-row {
+    transform: scale(1.02);
+}
+
+
+/* --- [6 / 7] RATING SENTIMENT SHAPE ENGINE --- */
+@keyframes fluidBlobLoop {
+    0%, 100% { border-radius: 35% 65% 60% 40% / 40% 40% 60% 60%; }
+    50% { border-radius: 52% 48% 40% 60% / 55% 38% 62% 45%; transform: scale(1.06) rotate(3deg); }
+}
+.feature-rating:hover {
+    box-shadow: 0 20px 40px rgba(18, 19, 26, 0.05);
+}
+/* Re-links and animates the liquid score blob over time */
+.feature-rating .score-badge-blob {
+    animation: fluidBlobLoop 5s ease-in-out infinite !important;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.feature-rating:hover .score-badge-blob {
+    box-shadow: 0 12px 24px rgba(255, 74, 112, 0.15);
+}
+.feature-rating .stars-glowing-row i {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* Generates an elegant sequential waving movement through the glowing stars rows */
+.feature-rating:hover .stars-glowing-row i:nth-child(1) { transform: translateY(-4px); transition-delay: 0s; }
+.feature-rating:hover .stars-glowing-row i:nth-child(2) { transform: translateY(-4px); transition-delay: 0.04s; }
+.feature-rating:hover .stars-glowing-row i:nth-child(3) { transform: translateY(-4px); transition-delay: 0.08s; }
+.feature-rating:hover .stars-glowing-row i:nth-child(4) { transform: translateY(-4px); transition-delay: 0.12s; }
+.feature-rating:hover .stars-glowing-row i:nth-child(5) { transform: translateY(-4px); transition-delay: 0.16s; }
+
+
+/* --- [7 / 7] LIVE TESTIMONIAL FEED --- */
+.feature-feedback:hover {
+    box-shadow: 0 20px 40px rgba(18, 19, 26, 0.05);
+}
+.feature-feedback .timeline-post {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+    padding: 8px;
+    border-radius: 14px;
+}
+/* Moves the targeted list row forward cleanly and adds a background surface tint */
+.feature-feedback .timeline-post:hover {
+    background-color: rgba(244, 242, 240, 0.7);
+    transform: translateX(8px);
+}
+.feature-feedback .avatar-ring {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.feature-feedback .timeline-post:hover .avatar-ring {
+    transform: scale(1.1) rotate(5deg);
+}
+
+
+/* ==========================================
+   🎨 ADVANCED CATEGORY DISTRIBUTION ANIMATION PACK
+   ========================================== */
+
+/* 1. KEYFRAME DEFINITIONS */
+@keyframes legendPop {
+    0% { transform: translateX(0) scale(1); color: #525461; }
+    50% { transform: translateX(6px) scale(1.02); color: var(--text-dark); }
+    100% { transform: translateX(4px) scale(1.02); color: var(--text-dark); }
+}
+
+@keyframes pulseCenterText {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.08); filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08)); }
+}
+
+
+/* 2. APPLYING MULTI-LAYERED HOVER INTERACTIONS */
+
+/* Modern 3D Isometric Tilt effect on the whole card wrapper */
+.feature-category {
+    perspective: 1000px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+                border-color 0.3s ease;
+}
+
+.feature-category:hover {
+    transform: translateY(-8px) rotateX(2deg) rotateY(-1deg);
+    box-shadow: 0 25px 50px rgba(18, 19, 26, 0.07);
+    border-color: rgba(18, 19, 26, 0.08);
+}
+
+/* Donut Graph Expansion + Glow */
+.feature-category .donut-graphic {
+    transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                filter 0.4s ease;
+}
+
+.feature-category:hover .donut-graphic {
+    transform: scale(1.07) rotate(25deg);
+    filter: drop-shadow(0 12px 24px rgba(255, 74, 112, 0.15));
+}
+
+/* Make the center counter metric ("48 Items") pop outward dynamically */
+.feature-category .donut-center-text {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.feature-category:hover .donut-center-text {
+    animation: pulseCenterText 1.5s ease-in-out infinite;
+}
+.feature-category:hover .donut-center-text h3 {
+    color: var(--accent-strawberry);
+}
+
+
+/* 3. STAGGERED CASCADE ON INDIVIDUAL LEGEND ROWS */
+.feature-category .legend-row {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    padding: 2px 6px;
+    border-radius: 8px;
+}
+
+/* Highlights the text rows cleanly one by one with different timing weights */
+.feature-category:hover .legend-row {
+    background-color: rgba(18, 19, 26, 0.02);
+}
+
+/* Rows expand sequentially outwards when you mouse over the layout card */
+.feature-category:hover .legend-row:nth-child(1) { animation: legendPop 0.4s forwards; animation-delay: 0.0s; }
+.feature-category:hover .legend-row:nth-child(2) { animation: legendPop 0.4s forwards; animation-delay: 0.05s; }
+.feature-category:hover .legend-row:nth-child(3) { animation: legendPop 0.4s forwards; animation-delay: 0.1s; }
+
+/* Micro-hover effect for when your mouse physically crosses over an individual text category item */
+.feature-category .legend-row:hover {
+    background-color: #FFF0F2 !important;
+    transform: translateX(12px) scale(1.04) !important;
+}
+.feature-category .legend-row:hover .bullet {
+    transform: scale(1.5);
+    box-shadow: 0 0 8px currentColor;
+}
+
+
+/* ==========================================
+   🎬 PREMIUM PAGE-LOAD (FILE OPEN) ENTRANCE ENGINE
+   ========================================== */
+
+/* 1. Keyframe definition for a smooth fade & slide-up */
+@keyframes fileOpenFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Base Configuration for Load Triggering */
+.recipe-card, .views-card, .avg-rating-card, .feedback-card,
+.feature-category, .feature-rating, .feature-feedback {
+    opacity: 0; /* Starts invisible until the animation timeline begins */
+    animation: fileOpenFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+/* 3. Staggered Delay Timeline for All 7 Items */
+
+/* --- Top 4 Metric Cards --- */
+.recipe-card {
+    animation-delay: 0.1s;
+}
+
+.views-card {
+    animation-delay: 0.2s;
+}
+
+.avg-rating-card {
+    animation-delay: 0.3s;
+}
+
+.feedback-card {
+    animation-delay: 0.4s;
+}
+
+/* --- Bottom 3 Deep Analytics Cards --- */
+.feature-category {
+    animation-delay: 0.5s;
+}
+
+.feature-rating {
+    animation-delay: 0.6s;
+}
+
+.feature-feedback {
+    animation-delay: 0.7s;
+}
+
+
+/* ==========================================
+   ✨ COMBINED EXISTING HOVER INTERACTION LOGIC
+   ========================================== */
+.organic-card, .studio-card {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.organic-card:hover, .studio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(18, 19, 26, 0.06);
+}
+
+
+/* ==========================================
+   🎬 SYMMETRIC INITIAL ENTRANCE ENGINE (PAGE-LOAD)
+   ========================================== */
+
+/* Uniform keyframes for page entry slide up */
+@keyframes universalFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Grouping all 7 components to execute the exact same entrance rules */
+.recipe-card, .views-card, .avg-rating-card, .feedback-card,
+.feature-category, .feature-rating, .feature-feedback {
+    opacity: 0;
+    animation: universalFadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Staggered delay wave down the timeline architecture */
+.recipe-card       { animation-delay: 0.1s; }
+.views-card        { animation-delay: 0.2s; }
+.avg-rating-card   { animation-delay: 0.3s; }
+.feedback-card     { animation-delay: 0.4s; }
+.feature-category  { animation-delay: 0.5s; }
+.feature-rating    { animation-delay: 0.6s; }
+.feature-feedback  { animation-delay: 0.7s; }
+
+
+/* ==========================================
+   ✨ SYMMETRIC INTERACTIVE HOVER CONTROLS
+   ========================================== */
+
+/* Enforces a consistent layout lifting curve and glow expansion on hover for all 7 panels */
+.recipe-card, .views-card, .avg-rating-card, .feedback-card,
+.feature-category, .feature-rating, .feature-feedback {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.recipe-card:hover, .views-card:hover, .avg-rating-card:hover, .feedback-card:hover,
+.feature-category:hover, .feature-rating:hover, .feature-feedback:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(18, 19, 26, 0.08) !important;
+}
+

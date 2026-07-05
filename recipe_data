@@ -1,0 +1,21 @@
+<?php
+$name=$_POST['name'];
+$des=$_POST['description'];
+$cat=$_POST['category'];
+$img=$_POST['image'];
+$lev=$_POST['d_level'];
+$time=$_POST['rtime'];
+
+
+$con=mysqli_connect("localhost","root","","twist");
+
+
+if($con){
+    $sel="select c_id from category where c_name=$cat";
+$qry=mysqli_query($con,$sel);
+$row=mysqli_fetch_array();
+echo "Finded";
+    // $ins="insert into recipe(r_name,r_des,c_id,r_time,r_level,r_image) values(?,?,?,?,?,?)";
+
+}
+?>
